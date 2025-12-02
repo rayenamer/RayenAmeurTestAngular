@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ListSuggestionComponent } from './core/list-suggestion/list-suggestion.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SuggestionFormComponent } from './features/suggestions/suggestion-form/suggestion-form.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,15 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FooterComponent,
     ListSuggestionComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SuggestionFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    ReactiveFormsModule
+],
   providers: [
     provideClientHydration()
   ],

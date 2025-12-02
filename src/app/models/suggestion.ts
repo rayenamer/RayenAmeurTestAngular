@@ -3,6 +3,6 @@ export interface Suggestion {
     title : string,
     description : string,
     category : string,
-    date : Date,
+    date : Date | string,
     status : string
 }

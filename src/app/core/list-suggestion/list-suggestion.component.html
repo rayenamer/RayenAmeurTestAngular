@@ -1,5 +1,6 @@
 <div class="container">
     <h1 class="text-center mt-3">Liste des Suggestions</h1><br>
+    <a routerLink="/suggestion/add">Ajouter une Suggestion</a>
     <div class="card mb-3" *ngFor="let suggestion of suggestions">
         <div class="card-body">
             <h5>{{ suggestion.title }} </h5>
