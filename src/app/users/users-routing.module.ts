@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
+import { UserListComponent } from './components/user-list/user-list-rayen-ameur.component';
+import { UserDetailsComponent } from './components/user-details/user-details-rayen-ameur.component';
+import { UserFormComponent } from './components/user-form/user-form-rayen-ameur.component';
+import { UserRoleRayenAmeurComponent } from './components/user-role/user-role-rayen-ameur.component';
+import { UserStatusComponent } from './components/user-status/user-status-rayen-ameur.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent }
-  
-]
+  { path: '', component: UserListComponent },
+  { path: 'new', component: UserFormComponent },
+  { path: ':id', component: UserDetailsComponent },
+  { path: ':id/edit', component: UserFormComponent },
+  { path: 'role/:role', component: UserRoleRayenAmeurComponent },
+  { path: 'status/:status', component: UserStatusComponent }
+];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes)
-  ],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class UsersRoutingModule { }
