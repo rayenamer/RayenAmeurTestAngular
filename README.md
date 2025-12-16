@@ -1,28 +1,141 @@
-# Firstproject
+🌟 Angular User Management Module
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.21.
+A beautifully structured Angular module for managing users with full CRUD functionality, role-based filtering, and status tracking. Built with scalability and maintainability in mind.
 
-## Development server
+📦 Project Structure
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This module contains:
 
-## Code scaffolding
+Services
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+UserserviceRayenAmeurService – Handles all API interactions with /api/users:
 
-## Build
+Fetch all users
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Fetch user by ID
 
-## Running unit tests
+Create a new user
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Update existing user
 
-## Running end-to-end tests
+Delete user
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Filter users by role
 
-## Further help
+Filter users by status
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# RayenAmeurTestAngular
+Components
+
+UserListComponent – Displays a list of all users.
+
+UserDetailsComponent – Shows detailed information of a selected user.
+
+UserFormComponent – Allows creating and editing users with reactive forms.
+
+UserRoleRayenAmeurComponent – Filters and displays users by their role.
+
+UserStatusComponent – Filters and displays users by their status.
+
+Module Setup
+
+UsersModule – Integrates all components, forms, HTTP client, and routing for the users feature.
+
+Imports:
+
+CommonModule
+
+FormsModule
+
+ReactiveFormsModule
+
+HttpClientModule
+
+UsersRoutingModule
+
+Provides: UserserviceRayenAmeurService
+
+🚀 Features
+
+✅ CRUD Operations
+
+Create, read, update, and delete users easily with API integration.
+
+✅ Role-based Filtering
+
+Display users by specific roles for better organization.
+
+✅ Status Management
+
+Track and filter users by active, inactive, or custom status.
+
+✅ Reactive Forms
+
+Build forms with validation for robust user creation and editing.
+
+✅ Scalable Architecture
+
+Modular design allows easy integration into larger Angular applications.
+
+⚡ Installation & Usage
+
+Install dependencies
+
+npm install
+
+
+Serve the application
+
+ng serve
+
+
+Navigate to Users Module
+Visit http://localhost:4200/users to access the user management interface.
+
+💻 Example API Usage
+
+Get all users
+
+this.userService.getUsers().subscribe(users => console.log(users));
+
+
+Get users by role
+
+this.userService.getUsersByRole('admin').subscribe(admins => console.log(admins));
+
+
+Create a new user
+
+const newUser = { name: 'John Doe', email: 'john@example.com', role: 'user', status: 'active' };
+this.userService.createUser(newUser).subscribe(response => console.log(response));
+
+🌈 Tech Stack
+
+Angular 18+
+
+TypeScript
+
+RxJS Observables
+
+Reactive Forms
+
+RESTful API integration
+
+⚠️ Version Notice
+
+This code may not work on your machine if the versions are mismatched 😉.
+
+Ensure Angular, TypeScript, and other dependencies match the versions used in this project.
+
+If you encounter errors, check package.json for exact version numbers.
+
+✨ Aesthetic Notes
+
+Components and services are prefixed for clarity (RayenAmeur)
+
+Modular and reusable structure for enterprise-level projects
+
+Designed for maintainability and scalability
+
+🔗 Author
+
+Rayen Ameur – 
