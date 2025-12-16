@@ -58,4 +58,12 @@ export class ListSuggestionComponent {
       }
     )
   }
+
+  deleteSuggestion(id: number){
+    this.suggestionService.deleteSuggestion(id).subscribe(
+      ()=>{
+        this.suggestions = this.suggestions.filter(s => s.id !== id);
+      }
+    )
+  }
 }

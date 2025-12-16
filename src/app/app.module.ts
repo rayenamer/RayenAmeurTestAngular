@@ -11,6 +11,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SuggestionFormComponent } from './features/suggestions/suggestion-form/suggestion-form.component';
 import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { SuggestionDetailsComponent } from './suggestion-details/suggestion-details.component';
+import { UpdateSuggestionComponent } from './update-suggestion/update-suggestion.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SuggestionDetailsComponent } from './suggestion-details/suggestion-deta
     HomeComponent,
     NotFoundComponent,
     SuggestionFormComponent,
-    SuggestionDetailsComponent
+    SuggestionDetailsComponent,
+    UpdateSuggestionComponent
   ],
   imports: [
     BrowserModule,
